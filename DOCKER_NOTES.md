@@ -24,7 +24,7 @@ docker run -it -p 8888:8888 --hostname localhost jupyter/pyspark-notebook
 ### per usare gli esercizi
 ```
 docker build . -t spark-demo 
-docker run -it -p 4040:4040 --hostname localhost -rm spark-demo /opt/spark/bin/pyspark  
+docker run -it -p 4040:4040 --hostname localhost --rm spark-demo /opt/spark/bin/pyspark  
 ```
 ## Altro
 ### Attaccare shell container

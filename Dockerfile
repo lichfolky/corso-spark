@@ -1,3 +1,6 @@
 FROM spark:python3
-COPY examples spark-examples
-EXPOSE 4040
+RUN mkdir -p /examples
+RUN chown spark-user /examples
+USER spark-user
+WORKDIR /examples
+COPY spark-examples spark-examples
