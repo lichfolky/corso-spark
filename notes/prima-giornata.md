@@ -32,3 +32,31 @@ Perchè usare spark:
 Origini: hadoop e google
 
 
+3
+---
+distributed computing
+
+anche una sola macchina con multipli thread / processi
+
+un cluster di computers
+
+
+RDD resilient ditributed dataset - immutable, non tabulare, non ha schema nè datatype vengono usati internamente
+
+4
+---
+Spark sessions per mandare comandi e ricevere risultati
+ogni utente avrà la sua sessione, userà il cluster isolato dagli altri utenti
+
+spark session comunica con spark context, master node nel cluster: coordina i nodi del cluster (i worker nodes)
+per usarli deve allocare le risorse usando il cluster manager: responsabilie distribuisce le risorse del cluster
+
+ogni workernode può eseguire più task contemporaneamente, ha una cache per salvare risultati
+
+scrivi spark in notebook
+
+
+
+
+5
+---
