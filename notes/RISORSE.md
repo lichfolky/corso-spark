@@ -24,3 +24,14 @@ https://www.youtube.com/watch?v=EB8lfdxpirM
 
 What exactly is Apache Spark? | Big Data Tools 
 https://www.youtube.com/watch?v=ymtq8yjmD9I
+
+
+
+
+
+---
+
+
+"""
+exec(open("spark-examples/hello_spark.py").read())
+"""

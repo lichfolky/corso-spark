@@ -5,12 +5,13 @@ Per provare gli esercizi nella cartella `exercises`
 Installare Docker, scaricandolo da qui:  
 
 
-### pySpark con Docker 
-Usiamo l'immagine docker ufficiale di pyspark:
-```
-docker run -it -p 4040:4040 --hostname localhost --rm spark:python3 /opt/spark/bin/pyspark
-```
+### Testiamo pyspark con docker
 
 
-### pySpark e jupyter con Docker 
-docker run -it -p 8888:8888 --hostname localhost jupyter/pyspark-notebook
+```
+docker build . -t spark-demo 
+docker run -it --rm -p 8888:8888 -p 4040:4040 --hostname localhost spark-demo
+```
+```
+/usr/local/spark/bin/pyspark
+```

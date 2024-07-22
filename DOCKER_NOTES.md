@@ -21,6 +21,10 @@ docker run -it -p 4040:4040 --hostname localhost --rm spark:python3 /opt/spark/b
 docker run -it -p 8888:8888 --hostname localhost jupyter/pyspark-notebook
 ```
 
+
+### pySpark e jupyter con Docker 
+docker run -it -p 10000:8888 -p 4040:4040 spark-demo
+docker run -it -p 8888:8888 -p 4040:4040 --hostname localhost spark-demo
 ### per usare gli esercizi
 ```
 docker build . -t spark-demo 
