@@ -8,15 +8,12 @@ https://spark.apache.org/downloads.html
 
 Estrai la cartella compressa, rinominala in `Spark` e spostala in `C:\`
 
-
-
+## Hadoop
 
 Salva `winutils.exe` da https://github.com/cdarlint/winutils
 nella cartella Hadoop/bin 
 
 https://phoenixnap.com/kb/install-spark-on-windows-10
-
-
 
 ### Configura le variabili di sistema
 
@@ -42,7 +39,6 @@ Crea un nuova cartella per il tuo progetto, poi spostati nella cartella con il t
 ```
 python -m venv .pyspark-env
 ```
-
 Ora attiva l'venv:
 
 **Windows**

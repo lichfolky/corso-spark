@@ -60,3 +60,14 @@ scrivi spark in notebook
 
 5
 ---
+
+
+Architettura
+---
+
+
+
+
+Stage
+---
+parallelize?

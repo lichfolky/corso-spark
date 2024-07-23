@@ -26,12 +26,10 @@ What exactly is Apache Spark? | Big Data Tools
 https://www.youtube.com/watch?v=ymtq8yjmD9I
 
 
+### ESERCIZI
+https://www.machinelearningplus.com/pyspark/pyspark-exercises-101-pyspark-exercises-for-data-analysis/
 
 
 
----
-
-
-"""
-exec(open("spark-examples/hello_spark.py").read())
-"""
+### PANDA
+https://github.com/guipsamora/pandas_exercises
