@@ -8,3 +8,7 @@ exec(open("spark-examples/hello_spark.py").read())
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 myplot = df_pandas.plot(kind='barh', x='occupation', y='plus_50k')
+
+
+import os
+os.system('cls||clear')

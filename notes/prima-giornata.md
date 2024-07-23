@@ -56,11 +56,39 @@ ogni workernode può eseguire più task contemporaneamente, ha una cache per sal
 scrivi spark in notebook
 
 
-
-
-5
+5 alcuni comandi
 ---
+```
+df.printschema()
+df.dtypes
+```
+https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/data_types.html
+```
+# cast a column from one type to other
+from pyspark.sql.types import FloatType
+df = df.withColumn("Price",df.Age.cast(FloatType()))
+```
+```
+df.drop("Age)
+df.withColumnRenamed('Age','age')
 
+df.select(['Age','Sex']).show(3)
+df.select(['Age','Sex']).describe().show()
+
+df.filter("age>2")
+# add another condition ('&' means and, '|' means or)
+df.filter((df['age'] > 18) | (df['ChestPainType'] == 'ATA'))
+# take every record where the 'ChestPainType' is NOT 'ATA'
+df.filter(~(df['ChestPainType'] == 'ATA'))
+
+df.groupby("age")
+
+functions ha max, min e avg
+
+pivot
+
+df.groupby("age").pivot("sex").count()
+```
 
 Architettura
 ---
@@ -71,3 +99,17 @@ Architettura
 Stage
 ---
 parallelize?
+
+DAG
+---
+lazy execution
+in base alle dipendenze riorganizzazione planning ahead
+
+
+Due tipi di comandi
+Transformations, aggiunte su dag ma eseguite dopo con azione, non cambiano dataframe input
+
+Actions,execute dag non crea nuovo df
+df.cache() se pensiamo di rieseguire dag, salvato in worker mem
+
+con df.collect() salviamo in master node per non pullare
