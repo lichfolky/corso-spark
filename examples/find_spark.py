@@ -2,12 +2,6 @@ import findspark
 
 findspark.init()
 
-# import os
-
-# cwd = os.getcwd()
-
-# print(cwd)
-
 from pyspark.sql import SparkSession
 
 # Crea una sessione Spark

@@ -3,10 +3,11 @@
 D: Cos'è big data?
 
 cosa vuol dire fare analisi big data:
-- Grandi dataset
-???
+- Grandi dataset distribuiti
 
-Spark è un sistema di calcolo ditribuito per processare dati big data 
+esempio sensori
+
+Spark è un sistema di calcolo ditribuito per processare big data 
 
 high speed e in-memory processing
 
