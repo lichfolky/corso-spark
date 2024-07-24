@@ -1,2 +1,3 @@
 FROM jupyter/pyspark-notebook
-COPY examples work
+COPY examples examples
+COPY examples files
