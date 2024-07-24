@@ -21,3 +21,7 @@ os.system('cls||clear')`
 pip show pyspark
 
 spark-shell
+
+
+
+

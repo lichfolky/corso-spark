@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 
+# per semi structured data
 # Crea una sessione Spark
 spark = SparkSession.builder.appName("json-spark").getOrCreate()
 

@@ -1,3 +1,3 @@
 FROM jupyter/pyspark-notebook
-COPY examples examples
-COPY examples files
+COPY examples work/examples
+COPY files work/files

@@ -1,14 +1,13 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import split
-from utils import tokenize
+from operator import add
 
-spark = SparkSession.builder.appName("spark").getOrCreate()
-textFile = spark.read.text("files/tobenot.txt")
-df = spark.createDataFrame(textFile)
+spark = SparkSession.builder.appName("WordCount").getOrCreate()
 
-print(textFile)
+lines = spark.read.text("files/tobenot.txt").rdd.map(lambda r: r[0])
+counts = lines.flatMap(lambda x: x.split(" ")).map(lambda x: (x, 1)).reduceByKey(add)
+output = counts.collect()
+for word, count in output:
+    print("%s: %i" % (word, count))
 
-split(textFile, " ")
-
-# Display Output
-textFile.display()
+spark.stop()

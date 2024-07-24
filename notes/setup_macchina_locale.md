@@ -76,13 +76,24 @@ pip install jupyterlab
 
 The issue is in the ShutdownHook that tries to delete the temp files but fails. Though you cannot solve the issue, you can simply hide the exceptions by adding the following 2 lines to your log4j.properties file in %SPARK_HOME%\conf. If the file does not exist, copy the log4j.properties.template and rename it.
 
+```
 logger.shutdownhookmanager.name = org.apache.spark.util.ShutdownHookManager
 logger.shutdownhookmanager.level = OFF
 
 logger.sparkenv.name = org.apache.spark.SparkEnv
 logger.sparkenv.level = ERROR
+```
 
-### Scala
+
+### org.apache.spark.SparkException: Python worker exited unexpectedly (crashed)
+
+Solved by replacing python 3.12.1 with python 3.11.8.
+```
+py -3.11  -m venv .pyspark
+```
+
+
+## Scala
 
 https://get-coursier.io/docs/cli-installation
 
@@ -91,3 +102,5 @@ sbt
 
 https://docs.scala-lang.org/scala3/book/introduction.html
 https://docs.scala-lang.org/tour/tour-of-scala.html
+
+

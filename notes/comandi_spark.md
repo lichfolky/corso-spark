@@ -3,7 +3,6 @@ pd_df = df.toPandas()
 df.select('Age').show(3)
 df.select(['Age','Sex']).show(3)
 df.count()
-
 df.printSchema()
 df.dtypes
 
