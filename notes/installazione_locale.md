@@ -29,7 +29,7 @@ Alla variabile Path, aggiungi `%HADOOP_HOME%\bin`
 
 https://www.python.org/downloads/
 
-Installa python, assicurati di selezionare `ADD to PATH`
+Installa python 3.11, assicurati di selezionare `ADD to PATH` se lo fai da applicazione, oppure usa Microsoft Store
 
 
 ## Installa pyspark in un venv
@@ -37,19 +37,15 @@ Crea un nuova cartella per il tuo progetto, poi spostati nella cartella con il t
 
 
 ```
-python -m venv .pyspark-env
+py -3.11  -m venv .pyspark
 ```
 Ora attiva l'venv:
 
 **Windows**
 
-In PowerShell:
+In shell:
 ```
-.pyspark-env\Scripts\Activate.ps1
-```
-Se in cmd.exe:
-```
-.pyspark-env\Scripts\activate.bat
+.pyspark-env\Scripts\Activate
 ```  
 **Se ci sono errori di permessi, dovrebbe bastare questo comando:**
 ```

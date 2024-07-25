@@ -13,3 +13,8 @@ https://hacktoberfest.com/
 https://www.gitkraken.com/
 
 [Contribuing in spark](https://github.com/apache/spark/blob/master/CONTRIBUTING.md)
+
+log4j vulnerability
+https://theconversation.com/what-is-log4j-a-cybersecurity-expert-explains-the-latest-internet-vulnerability-how-bad-it-is-and-whats-at-stake-173896
+
+https://xkcd.com/2347/
