@@ -59,37 +59,6 @@ scrivi spark in notebook
 
 5 alcuni comandi
 ---
-```
-df.printschema()
-df.dtypes
-```
-https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/data_types.html
-```
-# cast a column from one type to other
-from pyspark.sql.types import FloatType
-df = df.withColumn("Price",df.Age.cast(FloatType()))
-```
-```
-df.drop("Age)
-df.withColumnRenamed('Age','age')
-
-df.select(['Age','Sex']).show(3)
-df.select(['Age','Sex']).describe().show()
-
-df.filter("age>2")
-# add another condition ('&' means and, '|' means or)
-df.filter((df['age'] > 18) | (df['ChestPainType'] == 'ATA'))
-# take every record where the 'ChestPainType' is NOT 'ATA'
-df.filter(~(df['ChestPainType'] == 'ATA'))
-
-df.groupby("age")
-
-functions ha max, min e avg
-
-pivot
-
-df.groupby("age").pivot("sex").count()
-```
 
 Architettura
 ---
@@ -114,3 +83,19 @@ Actions,execute dag non crea nuovo df
 df.cache() se pensiamo di rieseguire dag, salvato in worker mem
 
 con df.collect() salviamo in master node per non pullare
+
+
+RDD Operations: You can perform two types of operations on RDD; Transformations and Actions
+
+
+
+
+data = [('James','','Smith','1991-04-01','M',3000),
+  ('Michael','Rose','','2000-05-19','M',4000),
+  ('Robert','','Williams','1978-09-05','M',4000),
+  ('Maria','Anne','Jones','1967-12-01','F',4000),
+  ('Jen','Mary','Brown','1980-02-17','F',-1)
+]
+
+columns = ["firstname","middlename","lastname","dob","gender","salary"]
+df = spark.createDataFrame(data=data, schema = columns)

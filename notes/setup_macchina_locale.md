@@ -66,8 +66,9 @@ source myvenv/bin/activate
 Installa con pip:
 ```
 pip install pyspark
-pip install findspark
-pip install jupyterlab
+pip install findspark?
+pip install psutil?
+pip install jupyterlab?
 ```
 
 ## Altro
