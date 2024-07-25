@@ -2,11 +2,11 @@ from utils import map_words, reduce_sum
 
 print(" MAPREDUCE ".center(90, "*"), "\n")
 
-## data1 = open("examples/files/tobenot1.txt").read()
-## data2 = open("examples/files/tobenot2.txt").read()
+data1 = open("examples/files/tobenot1.txt").read()
+data2 = open("examples/files/tobenot2.txt").read()
 
-data1 = "Nella vecchia fattoria ia ia o. Quante bestie ha zio Tobia ia ia o"
-data2 = "C'è la capra capra ca ca capra. Nella vecchia fattoria ia ia o"
+# data1 = "Nella vecchia fattoria ia ia o. Quante bestie ha zio Tobia ia ia o"
+# data2 = "C'è la capra capra ca ca capra. Nella vecchia fattoria ia ia o"
 
 clusters = {"doc1": [data1], "doc2": [data2]}  # or nodes
 clusters_cache = []

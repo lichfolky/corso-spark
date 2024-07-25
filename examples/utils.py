@@ -27,7 +27,8 @@ def reduce_sum(key_value_list):
     return new_cache
 
 
-# da stringa ad dizionario {parola,conteggio}, le parole non sono ripetute
+# da stringa ad dizionario {parola,conteggio}
+# le parole non sono ripetute!
 def count_words(text):
     word_count = {}
     words = tokenize(text)
