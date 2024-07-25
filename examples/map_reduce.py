@@ -11,7 +11,6 @@ data2 = "C'è la capra capra ca ca capra. Nella vecchia fattoria ia ia o"
 clusters = {"doc1": [data1], "doc2": [data2]}  # or nodes
 clusters_cache = []
 
-
 for cluster in clusters.items():
     print(cluster)
 

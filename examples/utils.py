@@ -13,7 +13,7 @@ def map_words(text):
 # somma i valori degli elementi con la stessa chiave
 def reduce_sum(key_value_list):
     new_cache = []
-    current_key, current_value = key_value_list[0]
+    current_key, current_value = ("", 1)
     for key, value in key_value_list:
         if current_key == key:
             current_value += value
@@ -23,6 +23,7 @@ def reduce_sum(key_value_list):
             current_value = value
 
     new_cache.append((current_key, current_value))
+    new_cache.remove(("", 1))
     return new_cache
 
 
@@ -42,3 +43,6 @@ def tokenize(text):
     trimmed_text = text.lower().strip()
     text_no_symbols = re.sub(r"[^\w]", " ", trimmed_text)
     return text_no_symbols.split()
+
+
+print(map_words("Ciao a tutti, Ciao ciao, ciao"))
