@@ -1,0 +1,11 @@
+index,workclass,education,occupation
+0,State-gov,Bachelors,Adm-clerical
+1,Self-emp-not-inc,Bachelors,Exec-managerial
+2,Private,HS-grad,Handlers-cleaners
+3,Private,11th,Handlers-cleaners
+4,Private,Bachelors,Prof-specialty
+5,Private,Bachelors,Prof-specialty
+6,NaN,HS-grad,NaN
+7,Private,Bachelors,Prof-specialty
+8,Private,Bachelors,Adm-clerical
+9,Self-emp-inc,Bachelors,Exec-managerial
