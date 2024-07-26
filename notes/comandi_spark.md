@@ -1,3 +1,10 @@
+https://spark.apache.org/docs/latest/rdd-programming-guide.html
+
+
+
+https://spark.apache.org/docs/3.5.1/sql-getting-started.html
+
+
 df.head(3)
 pd_df = df.toPandas()
 df.select('Age').show(3)
@@ -10,6 +17,7 @@ df.dtypes
 from pyspark.sql.types import FloatType
 df = df.withColumn("Age",df.Age.cast(FloatType()))
 df = df.withColumn("RestingBP",df.Age.cast(FloatType()))
+
 df.select(['Age','RestingBP']).describe().show()
 df.withColumnRenamed('Age','age').select('age').show(1)
 df.filter('age > 18')

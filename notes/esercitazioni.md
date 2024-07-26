@@ -55,13 +55,13 @@ spark_df = spark.createDataFrame(pd_df)
 
 df.groupBy("job").count().show()
 
-
-
 # evaluate a string expression into command
 from pyspark.sql.functions import expr
 exp = 'age + 0.2 * AgeFixed'
 df.withColumn('new_col', expr(exp)).select('new_col').show(3)
 
-
 ### regressione lineare in?
 https://www.youtube.com/watch?v=cZS5xYYIPzk
+
+
+Usando beautiful soup (https://beautiful-soup-4.readthedocs.io/en/latest/) e il modulo request, ottenere la lista di elementi html di un sito web (tipo wikipedia) e trasformarli in dataframe, poi estrarre il link dell'elemento htlm usando le funzioni di spark (https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/functions.html)

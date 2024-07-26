@@ -8,5 +8,9 @@ df.show()
 ## Definisco uno schema string
 schema = "Age INTEGER, Name STRING"
 df = spark.read.csv("files/dati.csv", schema=schema, header=True)
+df.printSchema()
+
 df = spark.read.csv("files/dati.csv", header=True, inferSchema=True)
+df.printSchema()
+
 df.show()

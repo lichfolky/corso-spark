@@ -5,9 +5,12 @@ from operator import add
 spark = SparkSession.builder.appName("WordCount").getOrCreate()
 
 lines = spark.read.text("files/tobenot_preprocessed.txt").rdd.map(lambda r: r[0])
+
 counts = lines.flatMap(lambda x: x.split(" ")).map(lambda x: (x, 1)).reduceByKey(add)
+
 output = counts.collect()
-for word, count in output:
+
+for word, count in counts:
     print("%s: %i" % (word, count))
 
 spark.stop()

@@ -1,6 +1,3 @@
-import findspark
-
-findspark.init()
 from pyspark import SparkContext
 
 ## https://spark.apache.org/docs/latest/rdd-programming-guide.html
@@ -23,3 +20,4 @@ print("*" * 20)
 
 # Stop the SparkContext
 spark.stop()
+input("...press any key")
